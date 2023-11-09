@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [
     react({
-      include: ["**/*.bs.mjs"], // since we're not using .jsx files we have to tell Vite to watch for HMR changes to .bs.mjs files
+      include: ["**/*.mjs"], // since we're not using .jsx files we have to tell Vite to watch for HMR changes to .bs.mjs files
     }),
   ],
 });

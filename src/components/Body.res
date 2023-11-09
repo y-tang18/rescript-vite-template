@@ -1,12 +1,12 @@
 @react.component
 let make = () => {
   <div>
-    <h1> {"Reasons I'm excited to learn React"->React.string} </h1>
+    <h1> {"tHIS IS A DUMMY PAGE"->React.string} </h1>
     <ol>
       <li>
-        {"It's a popular library, so I'll be able to fit in with the cool kids!"->React.string}
+        {"Use this template to start building your own pages!"->React.string}
       </li>
-      <li> {"I'm more likely to get a job as a developer if I know React"->React.string} </li>
+      <li> {"Edit as you go!"->React.string} </li>
     </ol>
   </div>
 }

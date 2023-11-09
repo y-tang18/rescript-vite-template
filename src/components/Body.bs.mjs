@@ -6,15 +6,15 @@ function Body(props) {
   return JsxRuntime.jsxs("div", {
               children: [
                 JsxRuntime.jsx("h1", {
-                      children: "Reasons I'm excited to learn React"
+                      children: "tHIS IS A DUMMY PAGE"
                     }),
                 JsxRuntime.jsxs("ol", {
                       children: [
                         JsxRuntime.jsx("li", {
-                              children: "It's a popular library, so I'll be able to fit in with the cool kids!"
+                              children: "Use this template to start building your own pages!"
                             }),
                         JsxRuntime.jsx("li", {
-                              children: "I'm more likely to get a job as a developer if I know React"
+                              children: "Edit as you go!"
                             })
                       ]
                     })
