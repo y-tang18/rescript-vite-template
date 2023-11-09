@@ -1,0 +1,43 @@
+rescript = 1
+g_finger := /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/@rescript/core/lib/ocaml/install.stamp
+g_finger := /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/@rescript/react/lib/ocaml/install.stamp
+rule astj
+  command = /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/.pnpm/rescript@10.1.4/node_modules/rescript/linux/bsc.exe  -bs-v 10.1.4 -bs-jsx 4 -bs-jsx-mode automatic -open RescriptCore -absname -bs-ast -o $out $i
+o src/App.ast : astj ../../src/App.res
+rule deps
+  command = /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/.pnpm/rescript@10.1.4/node_modules/rescript/linux/bsb_helper.exe -hash a0ed50e39663593296ab3dc6f3493f04 $in
+  restat = 1
+o src/App.d : deps src/App.ast src/App.iast
+o src/App.iast : astj ../../src/App.resi
+rule mi
+  command = /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/.pnpm/rescript@10.1.4/node_modules/rescript/linux/bsc.exe -I src/imgs -I src/components -I src -I /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/@rescript/core/lib/ocaml -I /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/@rescript/react/lib/ocaml -open RescriptCore  -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/App.cmi : mi src/App.iast
+rule mj
+  command = /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/.pnpm/rescript@10.1.4/node_modules/rescript/linux/bsc.exe -bs-read-cmi -I src/imgs -I src/components -I src -I /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/@rescript/core/lib/ocaml -I /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/@rescript/react/lib/ocaml -open RescriptCore  -bs-package-name rescript-vite-template -bs-package-output es6:$in_d:.bs.mjs -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/App.cmj ../../src/App.bs.mjs : mj src/App.ast src/App.cmi
+o src/Main.ast : astj ../../src/Main.res
+o src/Main.d : deps src/Main.ast
+rule mij
+  command = /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/.pnpm/rescript@10.1.4/node_modules/rescript/linux/bsc.exe -I src/imgs -I src/components -I src -I /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/@rescript/core/lib/ocaml -I /home/yuxin/projects/react-rescript/react-practice/rescript-vite-template/node_modules/@rescript/react/lib/ocaml -open RescriptCore  -bs-package-name rescript-vite-template -bs-package-output es6:$in_d:.bs.mjs -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/Main.cmj src/Main.cmi ../../src/Main.bs.mjs : mij src/Main.ast
+o src/components/Body.ast : astj ../../src/components/Body.res
+o src/components/Body.d : deps src/components/Body.ast src/components/Body.iast
+o src/components/Body.iast : astj ../../src/components/Body.resi
+o src/components/Body.cmi : mi src/components/Body.iast
+o src/components/Body.cmj ../../src/components/Body.bs.mjs : mj src/components/Body.ast src/components/Body.cmi
+o src/components/Footer.ast : astj ../../src/components/Footer.res
+o src/components/Footer.d : deps src/components/Footer.ast src/components/Footer.iast
+o src/components/Footer.iast : astj ../../src/components/Footer.resi
+o src/components/Footer.cmi : mi src/components/Footer.iast
+o src/components/Footer.cmj ../../src/components/Footer.bs.mjs : mj src/components/Footer.ast src/components/Footer.cmi
+o src/components/Header.ast : astj ../../src/components/Header.res
+o src/components/Header.d : deps src/components/Header.ast src/components/Header.iast
+o src/components/Header.iast : astj ../../src/components/Header.resi
+o src/components/Header.cmi : mi src/components/Header.iast
+o src/components/Header.cmj ../../src/components/Header.bs.mjs : mj src/components/Header.ast src/components/Header.cmi

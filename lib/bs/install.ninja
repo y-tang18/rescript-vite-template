@@ -1,0 +1,34 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o App.cmi : cp ../bs/src/App.cmi
+o App.cmj : cp ../bs/src/App.cmj
+o App.cmt : cp ../bs/src/App.cmt
+o App.res : cp ../../src/App.res
+o App.resi : cp ../../src/App.resi
+o App.cmti : cp ../bs/src/App.cmti
+o Main.cmi : cp ../bs/src/Main.cmi
+o Main.cmj : cp ../bs/src/Main.cmj
+o Main.cmt : cp ../bs/src/Main.cmt
+o Main.res : cp ../../src/Main.res
+o Body.cmi : cp ../bs/src/components/Body.cmi
+o Body.cmj : cp ../bs/src/components/Body.cmj
+o Body.cmt : cp ../bs/src/components/Body.cmt
+o Body.res : cp ../../src/components/Body.res
+o Body.resi : cp ../../src/components/Body.resi
+o Body.cmti : cp ../bs/src/components/Body.cmti
+o Footer.cmi : cp ../bs/src/components/Footer.cmi
+o Footer.cmj : cp ../bs/src/components/Footer.cmj
+o Footer.cmt : cp ../bs/src/components/Footer.cmt
+o Footer.res : cp ../../src/components/Footer.res
+o Footer.resi : cp ../../src/components/Footer.resi
+o Footer.cmti : cp ../bs/src/components/Footer.cmti
+o Header.cmi : cp ../bs/src/components/Header.cmi
+o Header.cmj : cp ../bs/src/components/Header.cmj
+o Header.cmt : cp ../bs/src/components/Header.cmt
+o Header.res : cp ../../src/components/Header.res
+o Header.resi : cp ../../src/components/Header.resi
+o Header.cmti : cp ../bs/src/components/Header.cmti
+build install.stamp : touch App.cmi App.cmj Main.cmi Main.cmj Body.cmi Body.cmj Footer.cmi Footer.cmj Header.cmi Header.cmj 
