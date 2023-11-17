@@ -7,7 +7,7 @@ let make = () => {
   <header className="App-header">
     <nav className="nav">
       <img src={logo} className="App-logo" alt="logo" />
-      <ul className="nav-items">
+      <ul className="nav--items">
         <li> {"Pricing"->React.string} </li>
         <li> {"About"->React.string} </li>
         <li> {"Contact"->React.string} </li>

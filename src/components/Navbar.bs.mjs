@@ -5,7 +5,7 @@ import * as JsxRuntime from "react/jsx-runtime";
 
 var logo = LogoSvg;
 
-function Header(props) {
+function Navbar(props) {
   return JsxRuntime.jsx("header", {
               children: JsxRuntime.jsxs("nav", {
                     children: [
@@ -26,7 +26,7 @@ function Header(props) {
                                     children: "Contact"
                                   })
                             ],
-                            className: "nav-items"
+                            className: "nav--items"
                           })
                     ],
                     className: "nav"
@@ -35,7 +35,7 @@ function Header(props) {
             });
 }
 
-var make = Header;
+var make = Navbar;
 
 export {
   make ,

@@ -25,10 +25,10 @@ o Footer.cmt : cp ../bs/src/components/Footer.cmt
 o Footer.res : cp ../../src/components/Footer.res
 o Footer.resi : cp ../../src/components/Footer.resi
 o Footer.cmti : cp ../bs/src/components/Footer.cmti
-o Header.cmi : cp ../bs/src/components/Header.cmi
-o Header.cmj : cp ../bs/src/components/Header.cmj
-o Header.cmt : cp ../bs/src/components/Header.cmt
-o Header.res : cp ../../src/components/Header.res
-o Header.resi : cp ../../src/components/Header.resi
-o Header.cmti : cp ../bs/src/components/Header.cmti
-build install.stamp : touch App.cmi App.cmj Main.cmi Main.cmj Body.cmi Body.cmj Footer.cmi Footer.cmj Header.cmi Header.cmj 
+o Navbar.cmi : cp ../bs/src/components/Navbar.cmi
+o Navbar.cmj : cp ../bs/src/components/Navbar.cmj
+o Navbar.cmt : cp ../bs/src/components/Navbar.cmt
+o Navbar.res : cp ../../src/components/Navbar.res
+o Navbar.resi : cp ../../src/components/Navbar.resi
+o Navbar.cmti : cp ../bs/src/components/Navbar.cmti
+build install.stamp : touch App.cmi App.cmj Main.cmi Main.cmj Body.cmi Body.cmj Footer.cmi Footer.cmj Navbar.cmi Navbar.cmj 

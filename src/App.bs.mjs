@@ -2,7 +2,7 @@
 
 import * as Body from "./components/Body.bs.mjs";
 import * as Footer from "./components/Footer.bs.mjs";
-import * as Header from "./components/Header.bs.mjs";
+import * as Navbar from "./components/Navbar.bs.mjs";
 import LogoSvg from "./imgs/logo.svg";
 import * as JsxRuntime from "react/jsx-runtime";
 
@@ -12,7 +12,7 @@ import './App.css'
 function App(props) {
   return JsxRuntime.jsxs("div", {
               children: [
-                JsxRuntime.jsx(Header.make, {}),
+                JsxRuntime.jsx(Navbar.make, {}),
                 JsxRuntime.jsx(Body.make, {}),
                 JsxRuntime.jsx(Footer.make, {})
               ],

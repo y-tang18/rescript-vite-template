@@ -3,10 +3,11 @@
 import * as JsxRuntime from "react/jsx-runtime";
 
 function Body(props) {
-  return JsxRuntime.jsxs("div", {
+  return JsxRuntime.jsxs("main", {
               children: [
                 JsxRuntime.jsx("h1", {
-                      children: "tHIS IS A DUMMY PAGE"
+                      children: "THIS IS A DUMMY PAGE",
+                      className: "main--title"
                     }),
                 JsxRuntime.jsxs("ol", {
                       children: [
@@ -16,7 +17,8 @@ function Body(props) {
                         JsxRuntime.jsx("li", {
                               children: "Edit as you go!"
                             })
-                      ]
+                      ],
+                      className: "main--facts"
                     })
               ]
             });

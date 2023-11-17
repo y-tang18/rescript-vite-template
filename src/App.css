@@ -1,5 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  background-color: #282d35;
+  height: 100vh;
+  margin: 0;
 }
 
 .App-logo {
@@ -14,12 +21,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #21222a;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1vh 0.5vh;
 }
 
 .App-link {
@@ -41,11 +49,47 @@
   align-items: center;
 }
 
-.nav-items {
+.nav--items {
   list-style: none;
   display: flex;
+  padding: 1vh;
+  align-items: center;
 }
 
-.nav-items > li {
+.nav--items > li {
   padding: 1vh;
+}
+
+main {
+  padding: 57px 27px;
+  color: white;
+  background-image: url(./imgs/react-background.png);
+  background-repeat: no-repeat;
+  background-position: right 95%;
+  text-align: left;
+}
+
+.main--title {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+.main--facts {
+  margin-top: 46px;
+  max-width: 400px;
+}
+
+.main--facts > li {
+  line-height: 19px;
+  padding-block: 10px;
+}
+
+.main--facts > li::marker {
+  font-size: 1.4rem;
+  color: #61dafb;
+}
+
+footer {
+  color: white;
 }
